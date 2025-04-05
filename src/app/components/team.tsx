@@ -20,6 +20,11 @@ const OurTeam = () => {
       role: "Operations Manager",
       image: "/team2.jpg",
     },
+    {
+      name: "Sara Adhiambo",
+      role: "Accountant",
+      image: "/team3.jpg",
+    },
   ];
 
   return (

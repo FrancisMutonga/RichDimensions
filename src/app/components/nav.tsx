@@ -19,12 +19,12 @@ const Navbar: React.FC = () => {
       className="fixed top-0 z-50 w-full flex text-gray-800  p-4 shadow-[0_4px_4px_-2px_rgba(0,0,0,0.4)] "
       style={{ fontFamily: "SegoeUI" }}
     >
-      <div className="container mx-auto flex ml-8 justify-between items-center">
-        <div className="flex items-center space-x-4 -ml-4">
+      <div className="container mx-auto flex ml-4 justify-between items-center">
+        <div className="flex items-center space-x-4 ">
           <Link href="/admin/login">
             <Image src="/logo.png" alt="Logo" width={60} height={60} />
           </Link>
-          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold">
+          <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold">
           Rich Dimensions Auctioneers
           </span>
         </div>
@@ -103,15 +103,7 @@ const Navbar: React.FC = () => {
             Contact
           </Link>
 
-          {/* Transparent Login Button for Mobile */}
-          <Link
-            href="/login"
-            className="text-pink-500 border border-pink-500 px-6 py-2 rounded-lg text-lg font-medium hover:bg-pink-500 hover:text-white transition mt-4 w-full text-center"
-            onClick={handleDrawerLinkClick}
-          >
-            Login
-          </Link>
-        </div>
+          </div>
       )}
     </nav>
   );

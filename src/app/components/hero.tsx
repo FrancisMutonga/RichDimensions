@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 
 const words = ["Private Investigation", "Auctioneering", "Asset Recovery"];
 
@@ -26,30 +26,19 @@ export default function Home() {
   }, [index]);
 
   return (
-    <div className="relative min-h-screen  text-white flex items-center justify-center">
-      {/* Background Image */}
-      <Image
-        src="/bg.jpg" // Ensure you have this image in your public folder
-        alt="Background"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        className="absolute z-0"
-      />
-      
-      {/* Overlay */}
+    <div className="relative w-full p-8 flex items-center justify-center overflow-hidden">
+       {/* Overlay */}
       <div className="absolute inset-0 bg-black/30 z-10"></div>
-      
+
       {/* Content */}
-      <div className="relative z-20 text-center px-4">
+      <div className="relative z-20 text-center px-6">
         <motion.h1
-          className="text-5xl font-extrabold"
+          className="text-xl md:text-3xl lg:text-5xl font-extrabold text-white"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 ,}}
+          transition={{ duration: 1 }}
         >
-          <span className="text-gray-500">Rich Dimensions Auctioneers</span>
-          <br />
+          <span className="block text-gray-600">Rich Dimensions Auctioneers</span>
           <span className="text-teal-700">{text}|</span>
         </motion.h1>
         <p className="mt-4 text-lg text-gray-300">Dignified Debt Solutions.</p>
