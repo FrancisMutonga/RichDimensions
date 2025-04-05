@@ -107,6 +107,28 @@ const Services = () => {
               needs.
             </p>
           </motion.div>
+          {/* Debt Collection */}
+          <motion.div
+            className="bg-gray-200 shadow-lg p-6 rounded-xl overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <Image
+              src="/debtcollection.jpg"
+              alt="Debt Collection"
+              className="mx-auto object-cover rounded-lg"
+              width={300}
+              height={200}
+            />
+            <h3 className="text-xl font-semibold text-teal-800 mt-4">
+              Debt Collection
+            </h3>
+            <p className="text-gray-500 mt-2">
+              Effective and ethical recovery of outstanding debts with a
+              professional approach.
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>
