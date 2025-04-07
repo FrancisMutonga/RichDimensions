@@ -47,6 +47,14 @@ const Navbar: React.FC = () => {
               About
             </Link>
           </li>
+          <li>
+            <Link
+              href="/properties"
+              className="text-lg font-semi text-link hover:text-blue-900"
+            >
+              Properties
+            </Link>
+          </li>
         
           <li>
             <Link
@@ -71,7 +79,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Drawer */}
       {isDrawerOpen && (
-        <div className="md:hidden fixed top-0 right-0 h-full bg-nude z-40 flex flex-col items-start p-6 space-y-4 shadow-lg w-1/3 transition-transform transform">
+        <div className="md:hidden fixed top-0 right-0 h-full bg-white/40 z-40 flex flex-col items-start p-6 space-y-4 shadow-lg w-1/3 transition-transform transform">
           <button
             onClick={handleDrawerLinkClick}
             className="self-end text-lg font-bold text-dark hover:text-blue-900 mb-4"
@@ -92,6 +100,13 @@ const Navbar: React.FC = () => {
             className="text-lg font-bold text-link hover:text-linkgreen"
           >
             About
+          </Link>
+          <Link
+            href="/properties"
+            onClick={handleDrawerLinkClick}
+            className="text-lg font-bold text-link hover:text-linkgreen"
+          >
+            Properties
           </Link>
          
 
