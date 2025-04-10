@@ -189,7 +189,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div className="flex items-center">
                   <FaEnvelope className="text-white mr-4" />
-                  <span className="text-lg">infos@gmail.com</span>
+                  <span className="text-lg">richdimensionsauctioneers@gmail.com</span>
                 </div>
                 <div className="flex items-center">
                   <FaMapMarkerAlt className="text-white mr-4" />
