@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
           <h3 className="text-xl font-bold mb-3">Find Us</h3>
           <div className="flex space-x-4">
             <a
-              href="https://www.facebook.com/people/Kilifi-Prime-Plots/61558718026419/"
+              href="https://www.facebook.com/people/Rich-Dimensions-Auctioneers/61575191037082/?rdid=QIUXe3JyCxMvSaMU&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Z9SngnvqE%2F"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
               />
             </a>
             <a
-              href="https://www.instagram.com/kilifi_prime_plots/"
+              href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -179,7 +179,7 @@ const ContactPage: React.FC = () => {
           {/* Contact Info Card */}
           <div className="bg-[url('/cantact.jpg')] bg-cover bg-center p-4 space-y-12 items-center rounded-lg shadow-lg flex items-center justify-center">
             <div className="bg-black/60 p-6 rounded-xl  ">
-              <h3 className="text-2xl text-gold font-bold text-left mb-6">
+              <h3 className="text-2xl text-white font-bold text-left mb-6">
                 Our Contact Information
               </h3>
               <div className="space-y-4 text-white">
@@ -201,7 +201,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div className="flex gap-12 items-center text-xl">
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/people/Rich-Dimensions-Auctioneers/61575191037082/?rdid=QIUXe3JyCxMvSaMU&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Z9SngnvqE%2F"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
