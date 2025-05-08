@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import "boxicons/css/boxicons.min.css";
 import Link from "next/link";
+import { FaTiktok } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const Footer: React.FC = () => {
             />
           </div>
         </div>
-        
+
         {/* Quick Links Section */}
         <div>
           <h3 className="text-xl font-semibold wmb-3">Quick Links</h3>
@@ -69,19 +70,14 @@ const Footer: React.FC = () => {
               />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://www.tiktok.com/search?q=rich.dimensions.a&t=1746598252202"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/twitter.png"
-                alt="Twitter"
-                width={24}
-                height={24}
-              />
+              <FaTiktok className="text-white hover:text-blue-900" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/richdimensions_auctioneers/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -112,8 +108,7 @@ const Footer: React.FC = () => {
       <div className="border-t border-white mt-6 pt-4">
         <div className="container mx-auto text-left">
           <p className="text-sm">
-            &copy; {new Date().getFullYear()} KryptoKenya. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} KryptoKenya. All rights reserved.
           </p>
         </div>
       </div>

@@ -8,6 +8,7 @@ import {
   FaWhatsapp,
   FaInstagram,
 } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -208,46 +209,32 @@ const ContactPage: React.FC = () => {
                     <FaFacebookF className="text-white hover:text-blue-800" />
                   </a>
                   <a
-                    href="https://twitter.com"
+                    href="https://wa.me/254755944533"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaWhatsapp className="text-white hover:text-blue-600" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.instagram.com/richdimensions_auctioneers/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaInstagram className="text-white hover:text-blue-900" />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/search?q=rich.dimensions.a&t=1746598252202"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaTiktok className="text-white hover:text-blue-900" />
                   </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-       {/* School Location with Google Maps */}
-<div className="flex flex-col gap-6 p-6">
-  
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-lg text-white shadow-lg">
-    {/* Main Showroom */}
-    <div className="w-full">
-      <h4 className="text-xl font-bold mb-3 text-center md:text-left"></h4>Visit us
-      <div className="relative w-full h-72">
-        <iframe
-          src="https://www.google.com/maps/place/Mwimuto/@-1.1965631,36.5806987,12.1z/data=!4m10!1m2!2m1!1sMwimuto-United+Complex!3m6!1s0x182f195c6a9ca457:0x96fb762742c451c4!8m2!3d-1.2202781!4d36.713232!15sChZNd2ltdXRvLVVuaXRlZCBDb21wbGV4WhgiFm13aW11dG8gdW5pdGVkIGNvbXBsZXiSAR1jb21tZXJjaWFsX3JlYWxfZXN0YXRlX2FnZW5jeZoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSWE0wdFBhRnBCRUFF4AEA-gEECAAQRg!16s%2Fg%2F11jrcmtyf9?entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D"
-          allowFullScreen
-          loading="lazy"
-          className="absolute top-0 left-0 w-full h-full border-0 rounded-lg"
-        ></iframe>
-      </div>
-    </div>
-
-   
-   
-  </div>
-</div>
-
+      
       </section>
     </div>
   );
