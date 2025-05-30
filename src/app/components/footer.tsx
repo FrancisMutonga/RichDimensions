@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
       <div className="border-t border-white mt-6 pt-4">
         <div className="container mx-auto text-left">
           <p className="text-sm">
-            &copy; {new Date().getFullYear()} KryptoKenya. All rights reserved.
+            &copy; {new Date().getFullYear()} Rich Dimensions Auctioneers. All rights reserved.
           </p>
         </div>
       </div>

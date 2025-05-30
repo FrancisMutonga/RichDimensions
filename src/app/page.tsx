@@ -8,12 +8,13 @@ import Services from "./components/services";
 import OurProcess from "./components/process";
 import Reviews from "./components/reviews";
 
+
 export default function Home() {
   return (
     <div className="text-green-300  text-center w-full p-6 mt-20">
     {/* <NavKeys/> */}
    <Hero/>
-   <AboutUs/>
+  <AboutUs/>
   <Services/>
    <WhyUs/>
    <OurProcess/>

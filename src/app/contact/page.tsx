@@ -196,8 +196,7 @@ const ContactPage: React.FC = () => {
                   <FaMapMarkerAlt className="text-white mr-4" />
 
                   <span>
-                  Mwimuto-United Complex ,
-                  PO box  43708-00100 ,Nairobi
+                  Shell Gikambura, 2nd Floor, Office C4
                   </span>
                 </div>
                 <div className="flex gap-12 items-center text-xl">
