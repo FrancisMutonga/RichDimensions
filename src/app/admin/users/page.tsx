@@ -116,7 +116,7 @@ export default function ManageUsers() {
                       className="w-20 h-20 rounded-full object-cover shadow-md"
                     />
                   ) : (
-                    <div className="w-20 h-20 rounded-full bg-teal-100 text-amber-700 flex items-center justify-center text-2xl font-bold uppercase shadow-inner">
+                    <div className="w-20 h-20 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-2xl font-bold uppercase shadow-inner">
                       {user.username
                         .split(" ")
                         .map((n) => n[0])
