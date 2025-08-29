@@ -333,7 +333,7 @@ const handleChange = <K extends keyof Product>(field: K, value: Product[K]) => {
             ))}
           </ol>
         ) : (
-          <p className="text-gray-500 italic">No features added yet. Click "Add Feature" to get started.</p>
+          <p className="text-gray-500 italic">No features added yet. Click &quot;Add Feature &quot; to get started.</p>
         )}
       </div>
 
@@ -374,7 +374,7 @@ const handleChange = <K extends keyof Product>(field: K, value: Product[K]) => {
             ))}
           </div>
         ) : (
-          <p className="text-gray-500 italic">No images added yet. Click "Add Image URL" to get started.</p>
+          <p className="text-gray-500 italic">No images added yet. Click &quot; Add Image URL &quot; to get started.</p>
         )}
       </div>
 

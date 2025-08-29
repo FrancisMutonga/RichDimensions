@@ -19,6 +19,11 @@ const Sidebar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const handleSidebarLinkClick = () => {
+    setTimeout(() => {
+      setIsSidebarOpen(false);
+    }, 200);
+  };
   // Detect screen size
   useEffect(() => {
     const handleResize = () => {
@@ -48,7 +53,7 @@ const Sidebar = () => {
         {isSidebarOpen && (
           <div className="fixed top-0 left-0 h-full w-40 bg-white/80 mt-4 shadow-xl flex flex-col transition-all duration-300 z-40 rounded-r-xl overflow-hidden">
             <button
-              onClick={() => setIsSidebarOpen(false)}
+              onClick={handleSidebarLinkClick}
               className="text-teal-700 mb-6 text-right w-full"
             >
               ✕

@@ -138,7 +138,7 @@ const EmblaCarousel = ({ images }: { images: string[] }) => {
   ]);
 
   return (
-    <div className="overflow-hidden rounded-lg shadow-md" ref={emblaRef}>
+    <div className="overflow-hidden rounded-lg p-4 shadow-md" ref={emblaRef}>
       <div className="flex">
         {images.map((image, index) => (
           <div key={index} className="flex-none w-full">

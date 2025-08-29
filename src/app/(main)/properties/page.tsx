@@ -26,6 +26,7 @@ export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchProducts();
@@ -34,6 +35,7 @@ export default function Products() {
 
   const fetchProducts = async () => {
     try {
+     
       const querySnapshot = await getDocs(collection(db, "products"));
       const productsData = querySnapshot.docs.map((doc) => ({
         id: doc.id,
@@ -42,6 +44,8 @@ export default function Products() {
       setProducts(productsData);
     } catch (error) {
       console.error("Error fetching products:", error);
+    }finally{
+      setLoading(false);
     }
   };
 
@@ -57,6 +61,14 @@ export default function Products() {
       console.error("Error fetching categories:", error);
     }
   };
+  
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-teal-600"></div>
+      </div>
+    );
+  }
 
   // Filter products by selected category ID
   const filteredProducts = selectedCategory
