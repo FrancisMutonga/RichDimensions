@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { db } from "./../../../firebase/client"; 
 import { doc, getDoc, updateDoc, collection, getDocs } from "firebase/firestore";
-import { Trash2, Plus, Image as ImageIcon, X } from "lucide-react";
-import { log } from "console";
+import { Trash2, Plus, Image as ImageIcon} from "lucide-react";
+import Image from "next/image";
+
 
 interface Product {
   id: string;
@@ -267,9 +268,11 @@ const handleChange = <K extends keyof Product>(field: K, value: Product[K]) => {
           <div className="grid grid-cols-2 gap-4 max-h-96 overflow-y-auto">
             {product.images.filter(img => img.trim() !== "").map((image, index) => (
               <div key={index} className="relative group">
-                <img
+                <Image
                   src={image}
                   alt={`Product image ${index + 1}`}
+                  height={60}
+                  width={60}
                   className="w-full h-32 object-cover rounded-lg border border-gray-200 shadow-sm"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;

@@ -39,10 +39,16 @@ export default function CreateUserPage() {
       setEmail("");
       setPassword("");
       setRole("user");
-    } catch (err: any) {
-      console.error(err);
-      setMessage("❌ Error: " + err.message);
-    }
+    } catch (err: unknown) {
+  if (err instanceof Error) {
+    console.error(err);
+    setMessage("❌ Error: " + err.message);
+  } else {
+    console.error("Unexpected error:", err);
+    setMessage("❌ An unexpected error occurred.");
+  }
+}
+
 
     setLoading(false);
   };
