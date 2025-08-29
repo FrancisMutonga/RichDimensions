@@ -19,12 +19,12 @@ const Navbar: React.FC = () => {
       className="fixed top-0 z-50 w-full flex text-gray-800  p-4 shadow-[0_4px_4px_-2px_rgba(0,0,0,0.4)] "
       style={{ fontFamily: "SegoeUI" }}
     >
-      <div className="container mx-auto flex ml-4 justify-between items-center">
-        <div className="flex items-center space-x-4 ">
-          <Link href="/admin/login">
+      <div className="container mx-auto flex ml-4 justify-between items-center gap-2">
+        <div className="flex items-center space-x-2 ">
+          <Link href="/auth/signin">
             <Image src="/logo.png" alt="Logo" width={60} height={60} />
           </Link>
-          <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold">
+          <span className="text-lsm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-semibold">
           Rich Dimensions Auctioneers
           </span>
         </div>

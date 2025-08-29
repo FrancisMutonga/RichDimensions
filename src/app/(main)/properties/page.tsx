@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { db } from "../firebase/client";
+import { db } from "../../firebase/client";
 import { collection, getDocs } from "firebase/firestore";
 import Image from "next/image";
 
 import Link from "next/link";
-import HeroNews from "../components/news";
+import HeroNews from "./../../components/news";
 
 interface Product {
   id: string;

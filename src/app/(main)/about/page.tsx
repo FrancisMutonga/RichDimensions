@@ -1,8 +1,8 @@
 import React from 'react';
-import AboutIntro from '../components/hero2';
-import OurMission from '../components/mission';
-import OurVision from '../components/vision';
-import OurTeam from '../components/team';
+import AboutIntro from '../../components/hero2';
+import OurMission from '../../components/mission';
+import OurVision from '../../components/vision';
+import OurTeam from '../../components/team';
 
 function page() {
   return (

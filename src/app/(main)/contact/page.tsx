@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 
+
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -36,26 +37,33 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setFormStatus({ error: "", success: "" });
 
     try {
-      setFormStatus({
-        error: "",
-        success: "Your message has been successfully submitted.",
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
-      // Reset the form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
+      if (res.ok) {
+        setFormStatus({ error: "", success: "Your message has been sent ✅" });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        const data = await res.json();
+        setFormStatus({
+          error: data.error || "Failed to send message ❌",
+          success: "",
+        });
+      }
     } catch {
-      setFormStatus({
-        error: "Failed to submit your message. Please try again later.",
-        success: "",
-      });
+      setFormStatus({ error: "Network error ❌", success: "" });
     }
   };
 
@@ -190,14 +198,14 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div className="flex items-center">
                   <FaEnvelope className="text-white mr-4" />
-                  <span className="text-lg">richdimensionsauctioneers@gmail.com</span>
+                  <span className="text-lg">
+                    richdimensionsauctioneers@gmail.com
+                  </span>
                 </div>
                 <div className="flex items-center">
                   <FaMapMarkerAlt className="text-white mr-4" />
 
-                  <span>
-                  Shell Gikambura, 2nd Floor, Office C4
-                  </span>
+                  <span>Shell Gikambura, 2nd Floor, Office C4</span>
                 </div>
                 <div className="flex gap-12 items-center text-xl">
                   <a
@@ -232,8 +240,30 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
           </div>
+          {/* Location with Google Maps */}
+          <div className="flex flex-col gap-6 p-6">
+            <h3 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-teal-700 mb-3">
+              Visit Us
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-lg text-white shadow-lg">
+              {/* Main Showroom */}
+              <div className="w-full">
+                <h4 className="text-xl font-bold text-teal-700 mb-3 text-center md:text-left">
+                  Main Showroom
+                </h4>
+                <div className="relative w-full h-72">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8638740486124!2d36.6540434!3d-1.2809019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1fe9750c840b%3A0x9beae1bf0ec51cca!2sShell%20Gikambura%20Petrol%20Station!5e0!3m2!1sen!2ske!4v1724843980000!5m2!1sen!2ske"
+                    allowFullScreen
+                    loading="lazy"
+                    className="absolute top-0 left-0 w-full h-full border-0 rounded-lg"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      
       </section>
     </div>
   );
