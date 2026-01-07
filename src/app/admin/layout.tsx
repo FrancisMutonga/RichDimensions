@@ -1,3 +1,4 @@
+"use client";
 import Sidebar from "./../components/navadmin";
 import WithAdminAuth from "./../components/WithAdminAuth";
 
