@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Rich Dimensional Auctioneers",
+  title: "Rich Dimensions Auctioneers",
 };
 
 export default function RootLayout({
